@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+     <div dir='rtl' dir="autoplay" class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">1</div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+     </div>
+
+    <script>
+
+       new Swiper('.swiper', {
+         navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+         },
+         
+         pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+         },
+
+         scrollbar: {
+            el: '.swiper-srrollbar',
+         },
+         
+         touchRatio: 1,
+         autoHeight: true,
+         slidesPerView: 1,
+         loop: false,
+         freeMode: true,
+         //rtl
+         autoplay: {
+            delay: 1000,
+            stopOnlastSlide: true,
+            disableOnInteraction: true,
+         },
+
+         initialSlide: 1,
+         speed: 20000,
+         direction: 'vertical',
+         effect: 'Fade',
+
+       })
+
+    </script>
+
+</body>
+</html>
